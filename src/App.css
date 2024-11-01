@@ -1,0 +1,93 @@
+/* Ensure navbar items are always visible */
+.navbar {
+  display: flex;
+  gap: 70px; /* space between nav items */
+  width: 60%;
+  flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+  margin-right: 50px;
+}
+
+.nav-item {
+  padding: 0.5rem;
+  color: #000; /* Default text color */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  justify-content: space-between;
+}
+
+/* Classic hover effect - blue text and background */
+.nav-item:hover {
+  color: #4d7eb3; /* Bootstrap blue for hover effect */
+  
+  border-radius: 4px; /* Optional rounded corners */
+}
+
+/* Media Queries for responsive design */
+.navbar-nav {
+  justify-content: space-between;
+  row-gap: 20px;
+  width: 90%;
+}
+/* For screens smaller than 1200px (Large devices like desktops) */
+@media (max-width: 1200px) {
+  .nav-item {
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.4rem; /* Adjust padding */
+  }
+}
+
+/* For screens smaller than 992px (Medium devices like tablets in landscape mode) */
+@media (max-width: 992px) {
+  .nav-item {
+    font-size: 0.95rem; /* Slightly smaller font */
+    padding: 0.35rem; /* Adjust padding */
+  }
+}
+
+/* For screens smaller than 768px (Small devices like tablets in portrait mode) */
+@media (max-width: 768px) {
+  .nav-item {
+    font-size: 0.9rem; /* Smaller font */
+    padding: 0.3rem; /* Reduce padding */
+  }
+
+  /* For stacked navbar on small screens */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* For screens smaller than 576px (Extra small devices like phones) */
+@media (max-width: 576px) {
+  .nav-item {
+    font-size: 0.85rem; /* Even smaller font for very small devices */
+    padding: 0.25rem; /* Further reduce padding */
+  }
+
+  .navbar {
+    gap: 0.5rem; /* Reduce the gap between nav items */
+  }
+}
+@media (max-width: 450px) {
+  .nav-item {
+    font-size: 0.85rem; /* Even smaller font for very small devices */
+    padding: 0.25rem; /* Further reduce padding */
+    margin-left: 13px;
+    margin-top: 25px;
+    
+  }
+
+  .navbar {
+    gap: 0.5rem; /* Reduce the gap between nav items */
+  }
+}
+@media (max-width: 300px) {
+  .nav-item {
+    font-size: 0.85rem; /* Even smaller font for very small devices */
+    padding: 0.25rem; /* Further reduce padding */
+  }
+
+  .navbar {
+    gap: 0.5rem; /* Reduce the gap between nav items */
+  }
+}

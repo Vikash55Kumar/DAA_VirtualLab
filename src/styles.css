@@ -1,0 +1,39 @@
+/* src/styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .objectives-container {
+    padding: 10px; /* Reduce padding on smaller screens */
+  }
+
+  .objective-text {
+    font-size: 0.9rem; /* Smaller text for mobile */
+  }
+}
+
+/* Animations */
+.objectives-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.objectives-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+h3:hover,
+.objective-text:hover {
+  transform: scale(1.05);
+}

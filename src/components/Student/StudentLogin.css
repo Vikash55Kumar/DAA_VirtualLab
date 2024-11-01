@@ -1,0 +1,96 @@
+/* Base styles for StudentLogin component */
+.login-container {
+  padding: 1rem; /* For mobile screens */
+}
+
+.login-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 28rem; /* Equivalent to max-w-sm */
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: white; /* Tailwind's white */
+  border-radius: 0.5rem; /* Tailwind's rounded-lg */
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
+}
+
+.login-image {
+  display: none; /* Hide on small screens */
+}
+
+.login-header {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.25rem; /* Tailwind's text-xl */
+  color: #4a5568; /* Tailwind's text-gray-600 */
+}
+
+.login-button {
+  margin-top: 1.5rem; /* mt-4 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a5568; /* Tailwind's text-gray-600 */
+  border: 1px solid #e2e8f0; /* Tailwind's border */
+  border-radius: 0.375rem; /* Tailwind's rounded-lg */
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #edf2f7; /* Tailwind's gray-200 */
+}
+
+.login-link {
+  text-align: center;
+  color: #a0aec0; /* Tailwind's text-gray-500 */
+  text-transform: uppercase;
+  font-size: 0.75rem; /* Tailwind's text-xs */
+}
+
+.login-input {
+  margin-top: 1rem; /* mt-4 */
+  padding: 0.5rem; /* Tailwind's px-4 py-2 */
+  width: 100%;
+  border: 1px solid #cbd5e0; /* Tailwind's border */
+  border-radius: 0.375rem; /* Tailwind's rounded-lg */
+}
+
+.login-input:focus {
+  border-color: #63b3ed; /* Tailwind's focus:border-blue-400 */
+  outline: none;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .login-container {
+    padding: 1.5rem; /* sm:p-6 */
+  }
+
+  .login-card {
+    flex-direction: row; /* Use row layout for larger screens */
+    max-width: 48rem; /* Equivalent to lg:max-w-4xl */
+  }
+
+  .login-image {
+    display: block; /* Show image on larger screens */
+    width: 50%; /* Take half of the card */
+    background-image: url("/side.avif");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login-header {
+    font-size: 1.5rem; /* Increase font size for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    padding: 2rem; /* xl:p-12 */
+  }
+
+  .login-header {
+    font-size: 2rem; /* Further increase font size for large screens */
+  }
+}
