@@ -1,0 +1,204 @@
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 40px; /* Increased padding for better layout */
+  border-radius: 8px;
+  min-height: 10vh !important;
+  width: 65vh !important;
+  margin: auto;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure it is above the slider */
+}
+
+.inner-container {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px; /* Adjust logo size */
+}
+
+.googleImg {
+  height: 3rem;
+  width: 3rem;
+}
+
+.title {
+  font-size: 28px; /* Increased title size for better visibility */
+  margin: 0;
+}
+
+.auth-account {
+  width: 90vh;
+}
+
+.form {
+  width: 50vh;
+  margin-top: 10px; /* Increased margin for better spacing */
+}
+
+.input {
+  width: 100%;
+  padding: 12px; /* Increased padding for a larger input area */
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.separator span {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.tst {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+.google-login {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 50vh;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: solid 0.1rem black;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.google-login:hover {
+  box-shadow: 0px 0px 3px black;
+  border: 2px solid black;
+}
+
+.google-login div {
+  font-weight: 600;
+}
+
+.google-login img {
+  margin-right: 10px; /* Spacing between image and text */
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px; /* Increased padding for a larger button */
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px; /* Increased margin for better spacing */
+  font-size: 16px; /* Increased font size for better readability */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.sign-up-link {
+  color: #007bff; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    width: 60%; /* Adjust width for medium screens */
+  }
+
+  .form {
+    width: 60vh; /* Adjust form width */
+  }
+
+  .google-login {
+    width: 60vh; /* Adjust Google login button width */
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: 60%; /* Adjust width for medium screens */
+    top: 40%;
+  }
+
+  .form {
+    width: 60vh; /* Adjust form width */
+  }
+
+  .google-login {
+    width: 60vh; /* Adjust Google login button width */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 50vh; /* Adjust width for medium screens */
+    top: 40%;
+  }
+
+  .form {
+    width: 40vh; /* Adjust form width */
+  }
+
+  .google-login {
+    width: 40vh; /* Adjust Google login button width */
+  }
+}
+
+@media (max-width: 580px) {
+  .container {
+    width: 50vh !important;
+    /* padding: 0px; Adjust width for medium screens */
+  }
+
+  .inner-container {
+    width: 40vh !important;
+  }
+
+  .form {
+    width: 40vh; /* Adjust form width */
+  }
+
+  .tst {
+    font-size: 1.1rem;
+  }
+  .google-login {
+    width: 40vh; /* Adjust Google login button width */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 40vh !important;
+  }
+
+  .inner-container {
+    width: 30vh !important;
+  }
+
+  .form {
+    width: 35vh; /* Adjust form width */
+  }
+
+  .tst {
+    font-size: 1.1rem;
+  }
+  .google-login {
+    width: 35vh; /* Adjust Google login button width */
+  }
+}
+

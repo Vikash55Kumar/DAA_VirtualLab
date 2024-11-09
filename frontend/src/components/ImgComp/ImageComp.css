@@ -1,0 +1,110 @@
+/* ImageComp.css */
+.image-container {
+  padding: 2rem;
+  background-color: #f3f4f6; /* Light gray background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  animation: fadeIn 1s ease-in-out; /* Container fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem; /* Base font size */
+  font-weight: 800;
+  color: #1f2937;
+  text-align: center;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .image-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-title {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-title {
+    font-size: 5rem;
+  }
+}
+
+.image-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+/* Animation keyframes for hover effects */
+@keyframes hoverEffect {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(4deg);
+  }
+}
+
+.image-item {
+  width: 16rem;
+  height: 10rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  border: 2px solid #d1d5db;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transform: scale(1);
+  transition: transform 0.6s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s;
+}
+
+.image-item:hover {
+  filter: grayscale(0);
+  transform: scale(1.1) rotate(4deg); /* Slight rotation on hover */
+  animation: hoverEffect 0.5s ease-in-out forwards; /* Animation applied */
+  opacity: 1;
+}
+
+/* Responsive Images */
+@media (min-width: 640px) {
+  .image-item {
+    width: 18rem;
+    height: 12rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-item {
+    width: 20rem;
+    height: 14rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .image-item {
+    width: 22rem;
+    height: 15rem;
+  }
+}
