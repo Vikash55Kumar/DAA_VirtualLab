@@ -53,11 +53,7 @@ function Navbar() {
         {/* Navigation Links */}
         <div className={`navbar-nav ${isNavOpen ? "active" : ""}`}>
           <div className="nav-comp">
-            <a className="nav-link" href="/">
-              Home
-            </a>
-
-            <div
+          <div
               className={`nav-link dropdown ${isDropdownOpen ? "open" : ""}`}
               onMouseEnter={() => setDropdownOpen(true)}
               onMouseLeave={() => setDropdownOpen(false)}
@@ -71,6 +67,11 @@ function Navbar() {
                 </div>
               )}
             </div>
+            
+            <a className="nav-link" href="/">
+              Home
+            </a>
+
             <a className="nav-link" href="/about"> About Us </a>
             <a className="nav-link" href="/contact"> Contact </a>
 
